@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Gestion des frais de scolarité</title>
+	<link rel="stylesheet" type="text/css" href="style2.css">
+	<link rel="shortcut icon" href="emit.png" type="image/x-icon">
+</head>
+<body>
+	<header>
+		<h1>Gestion des frais de scolarité de l'<img src="emit.png" alt="emit" width="50px" height="auto" ></h1>
+	</header>
+	<main>
+		
+		<section>
+			<h2>Ajouter votre payement ici :</h2>
+			<div class="container">
+			<form>
+				<label for="nom">Nom :</label>
+				<input type="text" id="nom" name="nom" placeholder="Entrez votre nom" required>
+				<label for="prenom">Prénom :</label>
+				<input type="text" id="prenom" name="prenom" placeholder="Entrez votre prénom" required>
+				<label for="parcour">Sélectionnez votre parcour</label>
+				<select id="parcour" name="parcour" required>
+					<option name="Licence"> Licence </option>
+					<option name="Master"> Master </option>
+				</select>
+				<label for="annee">Jour du payement :</label>
+				<input type="date" id="annee" name="annee"><br>
+				<label for="montant">Montant :</label>
+				<input type="number" id="montant" name="montant" min="400000" max="1000000" placeholder="500000 Ar si Licence et 800000 Ar si Master"><br>
+				<button class="button" type="button" onclick="ajouterAnnee()">Ajouter</button>
+			</form>
+			</div>
+		</section>
+		<section>
+			<h2>Liste des payements :</h2>
+			<div class="reponse">
+				<ul id="listpayement" style="list-style:disc;">
+				</ul>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<p>&copy; 2023 - Tous droits réservés</p>
+	</footer>
+	<script src="test.js">
+	</script>
+</body>
+</html>
